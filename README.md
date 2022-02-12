@@ -3,7 +3,7 @@
 ## CLI Application for managing hotels.
 
 #### Technologies used:
-    Python,
+    Python 3.9.0
     MYSQL
 
 #### Modules Required: 
