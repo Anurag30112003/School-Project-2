@@ -33,4 +33,4 @@
 ### Installation
 pip install -r requirements.txt
 
-### [Click Here to download the source code](https://github.com/Anurag30112003/School-Project-2)
+### [Website](https://anurag30112003.github.io/School-Project-2/)
