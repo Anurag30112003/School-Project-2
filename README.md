@@ -5,10 +5,10 @@
 #### Technologies used:
     **Python,**
     **MYSQL**
-<br>
-#### Modules Required: <br>
-**mysql-connector-python==8.0.28** <br>
-**protobuf==3.19.4** <br>
+
+#### Modules Required: <
+**mysql-connector-python==8.0.28** 
+**protobuf==3.19.4** 
 **python-dotenv==0.19.2**
 
     
