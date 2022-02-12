@@ -2,11 +2,11 @@
 
 ## CLI Application for managing hotels.
 
-Technologies used:
+#### Technologies used:
     **Python,**
     **MYSQL**
 <br>
-Modules Required: <br>
+#### Modules Required: <br>
 **mysql-connector-python==8.0.28** <br>
 **protobuf==3.19.4** <br>
 **python-dotenv==0.19.2**
