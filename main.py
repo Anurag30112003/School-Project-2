@@ -12,13 +12,10 @@ mydb = mysql.connector.connect(
 )
 mycursor = mydb.cursor()
 
-# sql = "INSERT INTO customers (name, address) VALUES ('Raju', 'Dolakpur')"
-# # val = ("John", "Highway 21")
-# mycursor.execute(sql)
+sql = ("DELETE FROM customers WHERE address = 'Apple st 652'")
 
-# mydb.commit()
+mycursor.execute(sql)
 
-# print(mycursor.rowcount, "record inserted.")
+mydb.commit()
 
-for i in range(10):
-    print(help(mycursor))
+print(mycursor.rowcount, "record(s) deleted")
