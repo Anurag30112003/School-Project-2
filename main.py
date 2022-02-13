@@ -1,4 +1,3 @@
-# Hotel Manangement system in python with mysql database.
 import mysql.connector
 from dotenv import load_dotenv
 import os
