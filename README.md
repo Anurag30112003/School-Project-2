@@ -31,6 +31,6 @@
 15. View all bookings for a specific date and time range and hotel
 
 ### Installation
-pip install -r requirements.txt
+    pip install -r requirements.txt
 
 ### [Website](https://anurag30112003.github.io/School-Project-2/)
