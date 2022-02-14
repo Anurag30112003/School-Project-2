@@ -1,4 +1,5 @@
 from basic import mycursor, mydb
+from columns_add import add_columns
 # Creating a new table.
 def create_table():
     table_name = input("Enter the table name: ")

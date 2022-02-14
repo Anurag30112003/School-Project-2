@@ -1,5 +1,6 @@
 from table_create import create_table
 from columns_add import add_columns
+from room_add import add_room
 from dotenv import load_dotenv
 import os
 load_dotenv()
@@ -8,8 +9,12 @@ leave = False
 # Hotel Manangement system in python with mysql database.
 def start(leave):
     while leave == False:
-        
         print("""
+        ============================================================
+                    Welcome to Hotel Management System.
+        ============================================================
+
+
         What do you want to do?
         1. Admin Section
         2. Add New room
@@ -40,12 +45,10 @@ def start(leave):
                         print("Invalid Input !!")
                         start(leave=False)   
         elif response == "2":
-            print("hello room")
-            pass
+            add_room()
         elif response == "3":
             leave = True
         else:
             print("Invalid Input !!")
             start(leave=False)
 start(leave)
-        
