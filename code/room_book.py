@@ -22,6 +22,9 @@ def book_room():
                 x = x.replace("'","")
                 x = x.replace(",","")
                 print("Room Number = ",x)
+            room_number = input("Enter the room number you want to book: ")
+            mycursor.execute("INSERT INTO rooms(status) VALUES('booked')")
+            mydb.commit()
             condition = False
         elif cl == '2':
             print("""
@@ -35,6 +38,10 @@ def book_room():
                 x = x.replace("'","")
                 x = x.replace(",","")
                 print("Room Number = ",x)
+            room_number = input("Enter the room number you want to book: ")
+            mycursor.execute(f"UPDATE rooms SET status = 'booked' WHERE room_number = '{room_number}' ")
+            mydb.commit()
+            print(f"Room {room_number} booked successfully")
             condition = False
                 
         elif cl == '3':
@@ -49,6 +56,9 @@ def book_room():
                 x = x.replace("'","")
                 x = x.replace(",","")
                 print("Room Number = ",x)
+            room_number = input("Enter the room number you want to book: ")
+            mycursor.execute("INSERT INTO rooms(status) VALUES('booked')")
+            mydb.commit()
             condition = False
         else:
             print("""
