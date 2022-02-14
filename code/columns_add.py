@@ -1,4 +1,4 @@
-from basic import mycursor, mydb
+from config import mycursor, mydb
 #Adding columns to the table
 def add_columns(response, table_name):
     response = response.upper()

@@ -1,4 +1,4 @@
-from basic import mycursor,mydb
+from config import mycursor,mydb
 
 def add_room():
     room_number = int(input("Enter room number: "))

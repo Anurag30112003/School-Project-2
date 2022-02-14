@@ -1,5 +1,6 @@
 from table_create import create_table
 from columns_add import add_columns
+from customer import customer
 from room_add import add_room
 from dotenv import load_dotenv
 import os
@@ -17,7 +18,7 @@ def start(leave):
 
         What do you want to do?
         1. Admin Section
-        2. Add New room
+        2. Customer Section
         3. Exit
         """)
         response = input("Enter your choice : ")
@@ -31,7 +32,8 @@ def start(leave):
                     What do you want to do?
                     1. Create Table
                     2. Add Columns
-                    3. Exit
+                    3. Add Room
+                    4. Exit
                     """)
                     response = input("Enter your choice : ")
                     if response == "1":
@@ -39,13 +41,15 @@ def start(leave):
                     elif response == "2":
                         add_columns(table_name=None,response="YES")
                     elif response == "3":
+                        add_room()
+                    elif response == "4":
                         print("Thank you !")
                         adminleave = True
                     else:
                         print("Invalid Input !!")
                         start(leave=False)   
         elif response == "2":
-            add_room()
+            customer()
         elif response == "3":
             leave = True
         else:
