@@ -17,7 +17,8 @@ def customer():
         5. Change Email
         6. Book Room
         7. Leave Room
-        8. Exit
+        8. Check your booking
+        9. Exit
         """)
         choice = input("Enter your choice: ")
         if choice == "1":
@@ -35,6 +36,8 @@ def customer():
         elif choice == "7":
             leave_room()
         elif choice == "8":
+            pass
+        elif choice == "9":
             condition = False
         else:
             print("Invalid choice.")
