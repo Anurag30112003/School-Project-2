@@ -3,6 +3,7 @@ from customer_delete import delete_customer
 from phonenumber_change import change_phonenumber
 from address_change import change_address
 from email_change import change_email
+from room_book import book_room
 def customer():
     condition = True
     while condition == True:
@@ -13,7 +14,8 @@ def customer():
         3. Change Phonenumber
         4. Change Address
         5. Change Email
-        6. Exit
+        6. Book Room
+        7. Exit
         """)
         choice = input("Enter your choice: ")
         if choice == "1":
@@ -27,6 +29,8 @@ def customer():
         elif choice == "5":
             change_email()
         elif choice == "6":
+            book_room()
+        elif choice == "7":
             condition = False
         else:
             print("Invalid choice.")
