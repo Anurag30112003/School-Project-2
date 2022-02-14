@@ -33,4 +33,6 @@
 ### Installation
     pip install -r requirements.txt
 
-### [Website](https://anurag30112003.github.io/School-Project-2/)
+## To know more how this application works, please refer to the following documentation.
+
+### [Documentation](https://anurag30112003.github.io/MySQL-with-python-tutorial/)
