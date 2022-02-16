@@ -2,6 +2,7 @@ from table_create import create_table
 from columns_add import add_columns
 from customer import customer
 from room_add import add_room
+from drop_column import cdrop
 from dotenv import load_dotenv
 import os
 load_dotenv()
@@ -33,7 +34,8 @@ def start(leave):
                     1. Create Table
                     2. Add Columns
                     3. Add Room
-                    4. Exit
+                    4. Drop Columns
+                    5. Exit
                     """)
                     response = input("Enter your choice : ")
                     if response == "1":
@@ -43,6 +45,8 @@ def start(leave):
                     elif response == "3":
                         add_room()
                     elif response == "4":
+                        cdrop()
+                    elif response == "5":
                         print("Thank you !")
                         adminleave = True
                     else:
