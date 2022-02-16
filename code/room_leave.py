@@ -14,5 +14,6 @@ def leave_room():
         mycursor.execute(f"UPDATE rooms SET status = 'empty' WHERE room_number = '{room_number}' ")
         mycursor.execute(f"UPDATE rooms SET cusname = NULL WHERE room_number='{room_number}'")
         mycursor.execute(f"UPDATE customers SET rooms = NULL WHERE name = '{login_id}' ")
+        mycursor.execute(f"UPDATE rooms SET booked_on = NULL WHERE room_number = '{room_number}'")
         mydb.commit()
         print(f"Room {room_number} is now empty")

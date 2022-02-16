@@ -1,6 +1,6 @@
 from config import mydb,mycursor
 def room_details():
-    mycursor.execute("SELECT room_number,room_type,price,status  FROM rooms ")
+    mycursor.execute("SELECT room_number,room_type,price,status,booked_on  FROM rooms ")
     result = mycursor.fetchall()
     for i in result:
         print(f'''
@@ -9,7 +9,6 @@ def room_details():
         Room Type = {i[1]}
         Price = ₹{i[2]}
         Status = {i[3]}
+        Booked On = {i[4]}
         =============================================================
         ''')
-    
-# room_details()

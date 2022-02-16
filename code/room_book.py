@@ -1,5 +1,11 @@
 from config import mydb , mycursor
+import datetime
 
+current_time = datetime.datetime.now()
+year = current_time.year
+month = current_time.month
+day = current_time.day
+time = f'{day}/{month}/{year}'
 def book_room():
     condition = True
     while condition == True:
@@ -37,7 +43,7 @@ def book_room():
                 room_number = input("Enter the room number you want to book: ")
                 mycursor.execute(f"UPDATE rooms SET status = 'booked' , cusname ='{login_id}'  WHERE room_number = '{room_number}' ")
                 mycursor.execute(f"UPDATE customers SET rooms = '{room_number}' WHERE name = '{login_id}' ")
-
+                mycursor.execute(f"UPDATE rooms SET booked_on = '{time}' WHERE room_number = '{room_number}'")
                 mydb.commit()
                 print(f"Room {room_number} booked successfully")
                 mydb.commit()
@@ -58,6 +64,7 @@ def book_room():
                 room_number = input("Enter the room number you want to book: ")
                 mycursor.execute(f"UPDATE rooms SET status = 'booked' , cusname ='{login_id}'  WHERE room_number = '{room_number}' ")
                 mycursor.execute(f"UPDATE customers SET rooms = '{room_number}' WHERE name = '{login_id}' ")
+                mycursor.execute(f"UPDATE rooms SET booked_on = '{time}' WHERE room_number = '{room_number}'")
                 mydb.commit()
                 print(f"Room {room_number} booked successfully")
                 condition = False
@@ -77,6 +84,7 @@ def book_room():
                 room_number = input("Enter the room number you want to book: ")
                 mycursor.execute(f"UPDATE rooms SET status = 'booked' , cusname ='{login_id}'  WHERE room_number = '{room_number}' ")
                 mycursor.execute(f"UPDATE customers SET rooms = '{room_number}' WHERE name = '{login_id}' ")
+                mycursor.execute(f"UPDATE rooms SET booked_on = '{time}' WHERE room_number = '{room_number}'")
                 mydb.commit()
                 print(f"Room {room_number} booked successfully")
                 mydb.commit()
