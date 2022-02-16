@@ -52,6 +52,9 @@ def start(leave):
                     else:
                         print("Invalid Input !!")
                         start(leave=False)   
+            else:
+                print("Invalid Password !!")
+                start(leave=False)
         elif response == "2":
             customer()
         elif response == "3":

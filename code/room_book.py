@@ -36,6 +36,7 @@ def book_room():
                     print("Room Number = ",x)
                 room_number = input("Enter the room number you want to book: ")
                 mycursor.execute(f"UPDATE rooms SET status = 'booked' , cusname ='{login_id}'  WHERE room_number = '{room_number}' ")
+                mycursor.execute(f"UPDATE customers SET rooms = '{room_number}' WHERE name = '{login_id}' ")
 
                 mydb.commit()
                 print(f"Room {room_number} booked successfully")
@@ -56,7 +57,7 @@ def book_room():
                 customerid = ()
                 room_number = input("Enter the room number you want to book: ")
                 mycursor.execute(f"UPDATE rooms SET status = 'booked' , cusname ='{login_id}'  WHERE room_number = '{room_number}' ")
-                # mycursor.execute(f"UPDATE rooms SET customerid = ")
+                mycursor.execute(f"UPDATE customers SET rooms = '{room_number}' WHERE name = '{login_id}' ")
                 mydb.commit()
                 print(f"Room {room_number} booked successfully")
                 condition = False
@@ -75,6 +76,7 @@ def book_room():
                     print("Room Number = ",x)
                 room_number = input("Enter the room number you want to book: ")
                 mycursor.execute(f"UPDATE rooms SET status = 'booked' , cusname ='{login_id}'  WHERE room_number = '{room_number}' ")
+                mycursor.execute(f"UPDATE customers SET rooms = '{room_number}' WHERE name = '{login_id}' ")
                 mydb.commit()
                 print(f"Room {room_number} booked successfully")
                 mydb.commit()

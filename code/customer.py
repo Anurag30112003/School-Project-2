@@ -5,6 +5,7 @@ from address_change import change_address
 from email_change import change_email
 from room_book import book_room
 from room_leave import leave_room
+from details_customer import customer_details
 def customer():
     condition = True
     while condition == True:
@@ -17,7 +18,7 @@ def customer():
         5. Change Email
         6. Book Room
         7. Leave Room
-        8. Check your booking
+        8. Customer Details
         9. Exit
         """)
         choice = input("Enter your choice: ")
@@ -36,7 +37,7 @@ def customer():
         elif choice == "7":
             leave_room()
         elif choice == "8":
-            pass
+            customer_details()
         elif choice == "9":
             condition = False
         else:
