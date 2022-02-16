@@ -1,2 +1,4 @@
-## CID Filter
-## Make customer relation aka join
+# Status
+
+#### Done
+### Code refining and improving left
