@@ -14,14 +14,14 @@
     
 ### Features
 
-2. Add new room
-3. Add new customer
-4. Add new booking
-6. View all rooms
-7. View all customers
-8. View all bookings
-10. View all bookings for a specific customer
-11. View all bookings for a specific room
+1. Add new room
+2. Add new customer
+3. Add new booking
+4. View all rooms
+5. View all customers
+6. View all bookings
+8. View all bookings for a specific customer
+9. View all bookings for a specific room
 
 ### Installation
     pip install -r requirements.txt
