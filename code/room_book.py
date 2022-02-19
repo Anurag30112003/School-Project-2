@@ -95,7 +95,7 @@ def book_room():
                 """)
         else:
             print("""
-            Wrong Passowrd.
+            Wrong Passoword.
             """)
         
     
