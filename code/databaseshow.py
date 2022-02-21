@@ -8,13 +8,13 @@ def showdatabases():
         for i in b:
             print("\n",i)
             print("\n")
-            print("============================================================================")
+            print("="*100)
     elif response == '2':
         mycursor.execute('SELECT * FROM customers')
         b = mycursor.fetchall()
         for i in b:
             print("\n",i)
             print("\n")
-            print("============================================================================")
+            print("="*100)
 
 
