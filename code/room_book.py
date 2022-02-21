@@ -14,9 +14,7 @@ def book_room():
         mycursor.execute(f"SELECT password FROM customers WHERE name = '{login_id}'")
         result = mycursor.fetchone()
         result = str(result)
-        result = result.replace("(","").replace(")","")
-        result = result.replace("'","")
-        result = result.replace(",","")
+        result = result.replace("(","").replace(")","").replace("'", "").replace(",","")
         if password == result:
             print("Login Successful")
             mycursor.execute(f"SELECT id FROM customers WHERE name = '{login_id}' ")
@@ -36,9 +34,7 @@ def book_room():
                 myresult = mycursor.fetchall()
                 for x in myresult:
                     x = str(x)
-                    x = x.replace("(","").replace(")","")
-                    x = x.replace("'","")
-                    x = x.replace(",","")
+                    x = x.replace("(","").replace(")","").replace("'", "").replace(",","")
                     print("Room Number = ",x)
                 room_number = input("Enter the room number you want to book: ")
                 mycursor.execute(f"UPDATE rooms SET status = 'booked' , cusname ='{login_id}'  WHERE room_number = '{room_number}' ")
@@ -56,9 +52,7 @@ def book_room():
                 myresult = mycursor.fetchall()
                 for x in myresult:
                     x = str(x)
-                    x = x.replace("(","").replace(")","")
-                    x = x.replace("'","")
-                    x = x.replace(",","")
+                    x = x.replace("(","").replace(")","").replace("'", "").replace(",","")
                     print("Room Number = ",x)
                 customerid = ()
                 room_number = input("Enter the room number you want to book: ")
@@ -77,9 +71,7 @@ def book_room():
                 myresult = mycursor.fetchall()
                 for x in myresult:
                     x = str(x)
-                    x = x.replace("(","").replace(")","")
-                    x = x.replace("'","")
-                    x = x.replace(",","")
+                    x = x.replace("(","").replace(")","").replace("'", "").replace(",","")
                     print("Room Number = ",x)
                 room_number = input("Enter the room number you want to book: ")
                 mycursor.execute(f"UPDATE rooms SET status = 'booked' , cusname ='{login_id}'  WHERE room_number = '{room_number}' ")
