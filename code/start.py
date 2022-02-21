@@ -21,7 +21,7 @@ def start(leave):
         What do you want to do?
         1. Admin Section
         2. Customer Section
-        3. Exit
+        3. Exit 
         """)
         response = input("Enter your choice : ")
         if response == "1":
