@@ -28,23 +28,37 @@ def book_room():
             cl = input("Enter your choice: ")
             if cl == '1':
                 print("""
-                The VIP rooms avilable are:
-                """)
-                mycursor.execute("SELECT room_number FROM rooms WHERE room_type = 'VIP' AND status = 'empty'")
+                The Normal rooms avilable are:
+                    """)
+                mycursor.execute("SELECT room_number FROM rooms WHERE room_type = 'Normal' AND status = 'empty'")
                 myresult = mycursor.fetchall()
+                x = None
                 for x in myresult:
                     x = str(x)
                     x = x.replace("(","").replace(")","").replace("'", "").replace(",","")
+                if  x!= None:
                     print("Room Number = ",x)
-                room_number = input("Enter the room number you want to book: ")
-                mycursor.execute(f"UPDATE rooms SET status = 'booked' , cusname ='{login_id}'  WHERE room_number = '{room_number}' ")
-                mycursor.execute(f"UPDATE customers SET rooms = '{room_number}' WHERE name = '{login_id}' ")
-                mycursor.execute(f"UPDATE rooms SET booked_on = '{time}' WHERE room_number = '{room_number}'")
-                mydb.commit()
-                print(f"Room {room_number} booked successfully")
-                mydb.commit()
-                condition = False
+                    room_number = input("Enter the room number you want to book: ")
+                    mycursor.execute(f"UPDATE rooms SET status = 'booked' , cusname ='{login_id}'  WHERE room_number = '{room_number}' ")
+                    mycursor.execute(f"UPDATE customers SET rooms = '{room_number}' WHERE name = '{login_id}' ")
+                    mycursor.execute(f"UPDATE rooms SET booked_on = '{time}' WHERE room_number = '{room_number}'")
+                    mydb.commit()
+                    print(f"Room {room_number} booked successfully")
+                    mydb.commit()
+                    condition = False
+                elif x == None:
+                        print("Sorry all the rooms are booked")
+                        condition = False
             elif cl == '2':
+                print("""
+                The Normal rooms avilable are:
+                """)
+                mycursor.execute("SELECT room_number FROM rooms WHERE room_type = 'Normal' AND status = 'empty'")
+                myresult = mycursor.fetchall()
+                x = None
+                for x in myresult:
+                    x = str(x)
+                    x = x.replace("(","").replace(")","").replace("'", "").replace(",","")
                 if x != None:
                     print("Room Number = ",x)
                     room_number = input("Enter the room number you want to book: ")
@@ -65,6 +79,7 @@ def book_room():
                 """)
                 mycursor.execute("SELECT room_number FROM rooms WHERE room_type = 'Normal' AND status = 'empty'")
                 myresult = mycursor.fetchall()
+                x = None
                 for x in myresult:
                     x = str(x)
                     x = x.replace("(","").replace(")","").replace("'", "").replace(",","")
