@@ -102,7 +102,7 @@ def book_room():
                 """)
         else:
             print("""
-            Wrong Passoword.
+            Wrong Password.
             """)
         
     
